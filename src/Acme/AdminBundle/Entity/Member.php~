@@ -1,0 +1,70 @@
+<?php 
+namespace Acme\AdminBundle\Entity;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="members")
+ * @ORM\Entity(repositoryClass="Acme\AdminBundle\Repository\MemberRepository")
+ */
+
+class Member{
+	/**
+	* @ORM\Column(type="integer")
+	* @ORM\Id
+	* @ORM\GeneratedValue(strategy="AUTO")
+	*/
+	private $id;
+
+	/**
+	* @ORM\Column(type="string", length=200)
+	*/
+	private $username;
+
+	/**
+	* @ORM\Column(type="string",length=100)
+	*/
+	private $password;
+
+    /**
+    * @ORM\Column(type="string", length=255)
+    */
+    private $email;
+
+    /**
+    * @ORM\Column(type="decimal")
+    */
+    private $money;
+
+    /**
+    * @ORM\Column(type="decimal")
+    */
+    private $frozen_money;
+
+    /**
+    * @ORM\Column(type="integer")
+    */
+    private $point;
+
+    /**
+    * @ORM\Column(type="integer")
+    */
+    private $address_id;
+
+    /**
+    * @ORM\Column(type="integer")
+    */
+    private $regtime;
+
+    /**
+    * @ORM\Column(type="integer")
+    */
+    private $lastlogin;
+
+    /**
+    * @ORM\Column(type="smallint")
+    */
+    private $status;
+}
+?>
